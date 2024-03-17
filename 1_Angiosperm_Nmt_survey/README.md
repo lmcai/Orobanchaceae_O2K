@@ -17,7 +17,7 @@ iqtree2 -s aln.fas -B 1000 -nt 4
 
 4. For absences, (1) HMMER search on CDS and (2) BLASTN search on genome seq was used to verify such losses.
 
-**4.1 HMMER**
+4.1 HMMER
 
 For a candidate gene loss in B14.5a (AT5G08060), a profile was build first based on DNA alignment
 ```
@@ -28,4 +28,4 @@ Then search the transcriptome of the query species
 hmmsearch AT5G08060.hmm Theobroma_cacao.cds.fas
 ```
 
-**4.2 BLASTN on genome**
+4.2 BLASTN on genome
