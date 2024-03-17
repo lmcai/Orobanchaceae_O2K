@@ -15,4 +15,17 @@ iqtree2 -s aln.fas -B 1000 -nt 4
 ```
 3. Manual inspect the phylogeny to identify paralog. If paralog is present, then use the interactive phylogeny editor `TreeGraph_2.15.0-887_beta` to edit the phylogeny. Then use `output_tips_in_order_from_subtree.py` to update the gene accessions.
 
-4. For absences, 
+4. For absences, (1) HMMER search on CDS and (2) BLASTN search on genome seq was used to verify such losses.
+
+**4.1 HMMER**
+
+For a candidate gene loss in B14.5a (AT5G08060), a profile was build first based on DNA alignment
+```
+hmmbuild AT5G08060.hmm AT5G08060.aln.fas
+```
+Then search the transcriptome of the query species
+```
+hmmsearch AT5G08060.hmm Theobroma_cacao.cds.fas
+```
+
+**4.2 BLASTN on genome**
