@@ -1,6 +1,6 @@
 # Angiosperm Nmt survey pipeline
 
-1. Use Arabidopsis thaliana ID as bait to identify the original orthogroup, output into tab-delimited format
+1. Use Arabidopsis thaliana ID in `ATH.Nmt.fas` as bait to identify the original orthogroup, output into tab-delimited format
 
 2. Extract sequences and build a draft phylogeny
 
