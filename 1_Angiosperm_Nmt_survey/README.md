@@ -28,7 +28,7 @@ Then search the transcriptome of the query species
 hmmsearch AT5G08060.hmm Theobroma_cacao.cds.fas
 ```
 
-4.2 BLASTN on genome
+4.2 BLASTN on genome, the GUI app `seq_extract_GUI.py` is very handy for extracting sequence with IDs
 ```
 makeblastdb -in Theobroma_cacao.genome.fas -dbtype nucl -out Tca
 blastn -db Tca -query AT5G08060.fas -evalue 1e-5 -outfmt 6 >AT5G08060.Tca.blast
