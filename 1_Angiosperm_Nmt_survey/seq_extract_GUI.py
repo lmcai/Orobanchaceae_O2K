@@ -30,7 +30,7 @@ class SequenceRetrieverApp:
         self.output_text.grid(row=3, columnspan=3, padx=10, pady=5)
 
     def browse_fasta(self):
-        fasta_file = filedialog.askopenfilename(filetypes=[("FASTA files", "*.fasta"), ("All files", "*.*")])
+        fasta_file = filedialog.askopenfilename(filetypes=[("FASTA files", "*.fas"), ("All files", "*.*")])
         self.fasta_entry.delete(0, tk.END)
         self.fasta_entry.insert(0, fasta_file)
 
