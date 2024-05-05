@@ -1,5 +1,6 @@
 from ete3 import Tree
 import os
+from Bio import SeqIO
 
 files=os.listdir('.')
 files=[i for i in files if i.endswith('.treefile')]
