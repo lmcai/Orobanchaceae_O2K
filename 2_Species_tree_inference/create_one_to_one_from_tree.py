@@ -19,11 +19,13 @@ for f in files:
 			t.set_outgroup(cin_root)
 	to_keep=[]
 	shortest={}
+	sp_pool=[]
 	for node in t:
 		sp=node.name.split('_')[0]
-		if not sp in to_keep:
+		if not sp in sp_pool:
 			to_keep.append(node.name)
 			shortest[sp]=node.get_distance(amb_node)
+			sp_pool.append(sp)
 		else:
 			if node.get_distance(amb_node)<shortest[sp]:
 				previous=[i for i in to_keep if i.startswith(sp)]
