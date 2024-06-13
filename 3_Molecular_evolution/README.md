@@ -1,6 +1,6 @@
 # Molecular Evolution with HYPHY
 
-1. label phylogeny (foreground vs background branches) using http://veg.github.io/phylotree.js
+1. label phylogeny (foreground vs background branches) using https://phylotree.hyphy.org/
 See instructions https://hyphy.org/tutorials/phylotree/
 
 2. Use interactive command line version of HYPHY
