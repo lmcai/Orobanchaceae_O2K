@@ -43,3 +43,5 @@ for file in files:
 	except ValueError:pass
 
 ```
+
+4. Use the commands in `trimal_iqtree.sh` to infer the species tree under the GHOST mixture model.
