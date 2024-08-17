@@ -17,10 +17,14 @@ Scripts used to fish N-mt genes, clean paralogs, align sequence, and generate pr
 
 Further remove paralogs using the phylogeny-based Yang and Smith pipeline, generate one-to-one ortholog for species tree inference 
 
-**3_Molecular_evolution**
+**3_Gene_loss_verification**
+
+BUSCO evaluation of data quality, phylogentic ANOVA analysis, Fisher's exact test for gene loss
+
+**4_Molecular_evolution**
 
 HyPhy commands for RELAX analysis
 	
-**4_O2K_statistic_analysis**
+**5_O2K_statistic_analysis**
 
 R script to analyze O2K data
