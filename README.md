@@ -5,10 +5,6 @@ Citation: Liming Cai, Robert K Jansen, Justin C Havird. Altered mitochondrial re
 
 Subfolder contents:
 
-**0_BUSCO_genome_transcriptome**
-
-BUSCO command to evaluate the compelteness of genomes and transcriptomes
-
 **1_Angiosperm_Nmt_survey**
 
 Scripts used to fish N-mt genes, clean paralogs, align sequence, and generate preliminary gene trees 
