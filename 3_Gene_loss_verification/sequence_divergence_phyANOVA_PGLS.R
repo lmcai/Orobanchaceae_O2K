@@ -145,3 +145,33 @@ Pairwise corrected P-values:
 1 0.266 1.000
 ---------
 
+###############################
+#####PGLS to test correlation between 
+library(caper)
+data <- read.csv("seq_div_missing_gene.csv",row.names = 1)
+comp.data<-comparative.data(phy_tree, data, names.col="Species_dup", vcv.dim=2)
+model2<-pgls(F84~missing_eukaryote_busco, data=comp.data)
+
+Call:
+pgls(formula = F84 ~ missing_eukaryote_busco, data = comp.data)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.08739 -0.04326 -0.01279  0.02068  0.07408 
+
+Branch length transformations:
+
+kappa  [Fix]  : 1.000
+lambda [Fix]  : 1.000
+delta  [Fix]  : 1.000
+
+Coefficients:
+                           Estimate  Std. Error t value  Pr(>|t|)    
+(Intercept)              0.46531206  0.01219510  38.156 < 2.2e-16 ***
+missing_eukaryote_busco -0.00132667  0.00028215  -4.702 3.353e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.0459 on 38 degrees of freedom
+Multiple R-squared: 0.3678,	Adjusted R-squared: 0.3512 
+F-statistic: 22.11 on 1 and 38 DF,  p-value: 3.353e-05 
