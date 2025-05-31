@@ -7,7 +7,7 @@ Subfolder contents:
 
 **1_Angiosperm_Nmt_survey**
 
-Scripts used to fish N-mt genes, clean paralogs, align sequence, and generate preliminary gene trees 
+Scripts used to fish N-mt genes, clean paralogs, align sequence, identify and remove N-terminal targeting peptides, and generate preliminary gene trees 
 	
 **2_Species_tree_inference**
 
