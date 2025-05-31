@@ -23,9 +23,11 @@ write.table(divergence_df, file = "distance_matrix_F84.tsv", sep = "\t", quote =
 
 #trait data
 library(caper)
+library(phytools)
 data <- read.csv("seq_div_missing_gene.csv")
 data$Class_oro=as.factor(data$Class_oro)
 data$Class_para=as.factor(data$Class_para)
+data$Class_transcriptome=as.factor(data$Class_transcriptome)
 
 #tree
 phy_tree <- read.tree("Nmt.con.rooted.tre")
@@ -145,8 +147,64 @@ Pairwise corrected P-values:
 1 0.266 1.000
 ---------
 
+#########################
+#transcriptome vs genome in missing eukaryote busco
+phylANOVA(phy_tree, data$Class_transcriptome, data$missing_eukaryote_busco, nsim=1000, posthoc=TRUE, p.adj="holm")
+
+ANOVA table: Phylogenetic ANOVA
+
+Response: y
+            Sum Sq   Mean Sq  F value Pr(>F)
+x         183.7508 183.75076 3.764853  0.185
+Residual 1903.4688  48.80689                
+
+P-value based on simulation.
+---------
+
+Pairwise posthoc test using method = "holm"
+
+Pairwise t-values:
+         0         1
+0 0.000000 -1.940323
+1 1.940323  0.000000
+
+Pairwise corrected P-values:
+      0     1
+0 1.000 0.185
+1 0.185 1.000
+---------
+
+#########################
+#transcriptome vs genome in fragmented eukaryote busco
+phylANOVA(phy_tree, data$Class_transcriptome, data$fragmented_eukaryote_busco, nsim=1000, posthoc=TRUE, p.adj="holm")
+
+ANOVA table: Phylogenetic ANOVA
+
+Response: y
+           Sum Sq   Mean Sq   F value Pr(>F)
+x        1829.599 1829.5989 13.250851  0.019
+Residual 5384.889  138.0741                 
+
+P-value based on simulation.
+---------
+
+Pairwise posthoc test using method = "holm"
+
+Pairwise t-values:
+         0         1
+0 0.000000 -3.640172
+1 3.640172  0.000000
+
+Pairwise corrected P-values:
+      0     1
+0 1.000 0.019
+1 0.019 1.000
+---------
+
+
 ###############################
-#####PGLS to test correlation between 
+#####PGLS to test correlation between sequence divergence and missing data
+
 library(caper)
 data <- read.csv("seq_div_missing_gene.csv",row.names = 1)
 comp.data<-comparative.data(phy_tree, data, names.col="Species_dup", vcv.dim=2)
