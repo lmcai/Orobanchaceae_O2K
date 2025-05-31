@@ -7,7 +7,7 @@ Subfolder contents:
 
 **1_Angiosperm_Nmt_survey**
 
-Scripts used to fish N-mt genes, clean paralogs, align sequence, identify and remove N-terminal targeting peptides, and generate preliminary gene trees 
+Scripts used to fish N-mt genes, clean paralogs, align sequence, and generate preliminary gene trees 
 	
 **2_Species_tree_inference**
 
@@ -19,7 +19,7 @@ BUSCO evaluation of data quality, phylogentic ANOVA analysis, Fisher's exact tes
 
 **4_Molecular_evolution**
 
-HyPhy commands for RELAX analysis
+N-terminal targeting peptides identification and removal; HyPhy commands for RELAX analysis
 	
 **5_O2K_statistic_analysis**
 
