@@ -6,7 +6,7 @@ To remove these peptides from alignments, apply the python script `n-terminal_pp
 
 # Molecular Evolution with HYPHY
 
-1. label phylogeny (foreground vs background branches) using https://phylotree.hyphy.org/
+1. label phylogeny (foreground vs background branches) using [https://phylotree.hyphy.org/](https://phylotree.hyphy.org/)
 See instructions https://hyphy.org/tutorials/phylotree/
 
 2. Use interactive command line version of HYPHY
